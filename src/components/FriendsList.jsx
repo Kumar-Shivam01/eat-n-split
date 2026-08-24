@@ -21,13 +21,13 @@ const initialFriends = [
   },
 ];
 
-const FriendsList = () => {
+const FriendsList = ({setAddFriend,addFriend}) => {
   return (
     <ul>
       {initialFriends.map((friend)=>(
         <Friend data={friend} key={friend.id}/>
       ))}
-      <button className='button'>Add friend</button>
+      {!addFriend && <button onClick={()=>setAddFriend(!addFriend)} className='button'>Add friend</button>}
     </ul>
   )
 }
