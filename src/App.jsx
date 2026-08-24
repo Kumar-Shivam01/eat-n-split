@@ -1,7 +1,10 @@
 import "./App.css";
+import FriendsList from "./components/FriendsList";
 const App = () => {
   return (
-    <div className="app">App</div>
+    <div className="app">
+      <FriendsList/>
+    </div>
   )
 }
 
