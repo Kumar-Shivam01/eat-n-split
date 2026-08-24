@@ -23,14 +23,12 @@ const initialFriends = [
 
 const FriendsList = () => {
   return (
-    <div className='sidebar'>
     <ul>
       {initialFriends.map((friend)=>(
         <Friend data={friend} key={friend.id}/>
       ))}
       <button className='button'>Add friend</button>
     </ul>
-    </div>
   )
 }
 
