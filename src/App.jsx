@@ -27,14 +27,24 @@ const initialFriends = [
 const App = () => {
   const [addFriend, setAddFriend] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
-  const [selectedFriend,setSelectedFriend] = useState(null);
+  const [selectedFriend, setSelectedFriend] = useState(null);
   function handleAddFriend(newFriend) {
     setFriends((friends) => [...friends, newFriend]);
   }
-  function handleSelectFriend(friend){
+  function handleSelectFriend(friend) {
     //console.log(friend)
-      setSelectedFriend(friend)
-      setAddFriend(false)
+    setSelectedFriend(friend);
+    setAddFriend(false);
+  }
+  function handleSplitBill(value) {
+    setFriends((friends) =>
+      friends.map((friend) =>
+        friend.id === selectedFriend.id
+          ? { ...friend, balance: friend.balance + value }
+          : friend,
+      )
+    );
+    setSelectedFriend(null)
   }
   return (
     <div className="app">
@@ -54,7 +64,12 @@ const App = () => {
           />
         )}
       </div>
-      {selectedFriend && <SplitBillForm selectedFriend={selectedFriend}/>}
+      {selectedFriend && (
+        <SplitBillForm
+          onSplitBill={handleSplitBill}
+          selectedFriend={selectedFriend}
+        />
+      )}
     </div>
   );
 };
