@@ -1,8 +1,8 @@
 
-const SplitBillForm = () => {
+const SplitBillForm = ({selectedFriend}) => {
   return (
     <form className="form-split-bill">
-        <h2>Split a bill with X</h2>
+        <h2>Split a bill with {selectedFriend.name}</h2>
 
         <label>💰 Bill value</label>
         <input type="number"/>
@@ -10,7 +10,7 @@ const SplitBillForm = () => {
         <label>🙎 Your expense</label>
         <input type="text" />
 
-        <label>🧑 X's expense</label>
+        <label>🧑 {selectedFriend.name}'s expense</label>
         <input type="number" disabled/>
 
         <label>🤑 Who is paying the bill?</label>
