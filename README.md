@@ -1,16 +1,28 @@
-# React + Vite
+About : 
+-This is a mini project that I created while learning React.
+-It's a bill split app which lets you split the bill among your friends.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
+-You can add a friend name into the list.
+-You can select a friend with whom you want to split the bill.
+-You get a form for splitting the bill among you and your friend.
+-Reflects the amount you owe to you friend.
+-Reflects the amount your friend owes to you.
 
-Currently, two official plugins are available:
+Working:
+-Add a friend into the friend list if you do not have their name into the list.
+-Select that friend with whom you want to split the bill with.
+-Upon selecting that friend, you get a Split Bill form.
+-Fill the bill amount and amount you choose to pay.
+-Friend's part of the bill will get auto calculated.
+-Choose who's going to pay the bill, you or your friend.
+-Click the split button.
+-The result, wheather the amount you owe to your friend or the amount your friend owes to you is refelcted in their profile in the friends list.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Learnt and practiced:
+-Writing components.
+-Props drilling.
+-State management.
+-Lifting up state.
+-Event handling and much more...
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
